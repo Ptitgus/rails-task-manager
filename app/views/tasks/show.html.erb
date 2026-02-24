@@ -1,0 +1,7 @@
+<h1>Task : <%= @task.title %></h1>
+<p>Details : <%= @task.details %></p>
+
+
+<%= link_to "Back to all tasks", tasks_path %>
+<%= link_to "Edit this task", edit_task_path %>
+<%= link_to "<i class='fa-regular fa-trash-can'></i>".html_safe, task_path, data: {turbo_method: :delete, turbo_confirm: "Please confirm : Delete the task ==> #{@task.title} ?"} %>
